@@ -1,7 +1,68 @@
 {
-    "MetaModulePluginMaintainer": "Eric Gao",
-    "MetaModulePluginMaintainerEmail": "",
-    "MetaModulePluginMaintainerUrl": "",
-    "MetaModuleDescription": "",
-    "MetaModuleIncludedModules": []
+    "MetaModulePluginMaintainer": "oksami",
+    "MetaModulePluginMaintainerEmail": "itsoksami@gmail.com",
+    "MetaModulePluginMaintainerUrl": "https://github.com/Ericxgao/metamodule-mschack",
+    "MetaModuleDescription": "MSCHack",
+    "MetaModuleIncludedModules": [
+        {
+            "slug": "Compressor1",
+            "name": "Compressor"
+        },
+        {
+            "slug": "SynthDrums",
+            "name": "Synth Drums"
+        },
+        {
+            "slug": "MasterClockx4",
+            "name": "MSC Clock x4"
+        },
+        {
+            "slug": "Mix_4_0_4",
+            "name": "MIX 4 Channel"
+        },
+        {
+            "slug": "ASAF8",
+            "name": "ASAF8"
+        },
+        {
+            "slug": "PingPong_Widget",
+            "name": "Ping Pong"
+        },
+        {
+            "slug": "StepDelay",
+            "name": "Step Delay"
+        },
+        {
+            "slug": "Osc_3Ch_Widget",
+            "name": "OSC 3 Channel"
+        },
+        {
+            "slug": "Dronez",
+            "name": "Dronez"
+        },
+        {
+            "slug": "Morze",
+            "name": "Morze"
+        },
+        {
+            "slug": "Windz",
+            "name": "Windz"
+        },
+        {
+            "slug": "Lorenz",
+            "name": "Lorenz"
+        },
+        {
+            "slug": "Alienz",
+            "name": "Alienz"
+        },
+        {
+            "slug": "OSC_WaveMorph_3",
+            "name": "Wave morph Oscillator"
+        },
+        {
+            "slug": "Maude221",
+            "name": "Maude Two to One"
+        }
+    ]
 }
