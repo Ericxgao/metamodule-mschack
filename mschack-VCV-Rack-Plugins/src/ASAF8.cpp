@@ -127,7 +127,7 @@ struct ASAF8_Widget : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/ASAF8.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ASAF8.svg")));
 
         x = 3;
         y = 77;

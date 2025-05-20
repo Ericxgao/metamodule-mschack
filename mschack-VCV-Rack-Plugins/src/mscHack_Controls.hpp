@@ -2486,7 +2486,7 @@ struct MySquareButton : SvgSwitch
     MySquareButton()
     {
         momentary = true;
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_square_button.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_square_button.svg")));
         sw->wrap();
         // box.size = sw->box.size;
     }
@@ -2501,7 +2501,7 @@ struct MySquareButton2 : SvgSwitch
     MySquareButton2()
     {
         momentary = true;
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Square_Button2.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Square_Button2.svg")));
         sw->wrap();
         // box.size = sw->box.size;
     }
@@ -2515,8 +2515,8 @@ struct PianoWhiteKey : SvgSwitch
 {
     PianoWhiteKey()
     {
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_WhiteKeyOff.svg")));
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_WhiteKeyOn.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_WhiteKeyOff.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_WhiteKeyOn.svg")));
         sw->wrap();
         // box.size = sw->box.size;
     }
@@ -2530,8 +2530,8 @@ struct PianoBlackKey : SvgSwitch
 {
     PianoBlackKey()
     {
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_BlackKeyOff.svg")));
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_BlackKeyOn.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_BlackKeyOff.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_BlackKeyOn.svg")));
         sw->wrap();
         // box.size = sw->box.size;
     }
@@ -2546,11 +2546,11 @@ struct MyToggle1 : SvgSwitch
     MyToggle1()
     {
         addFrame(
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_3p_vert_simple_01.svg")));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_3p_vert_simple_01.svg")));
         addFrame(
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_3p_vert_simple_02.svg")));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_3p_vert_simple_02.svg")));
         addFrame(
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_3p_vert_simple_03.svg")));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_3p_vert_simple_03.svg")));
         sw->wrap();
         // box.size = sw->box.size;
     }
@@ -2564,11 +2564,11 @@ struct FilterSelectToggle : SvgSwitch
 {
     FilterSelectToggle()
     {
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_5p_filtersel_01.svg")));
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_5p_filtersel_02.svg")));
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_5p_filtersel_03.svg")));
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_5p_filtersel_04.svg")));
-        addFrame(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_5p_filtersel_05.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_5p_filtersel_01.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_5p_filtersel_02.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_5p_filtersel_03.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_5p_filtersel_04.svg")));
+        addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_5p_filtersel_05.svg")));
         // sw->wrap();
     }
 };
@@ -2587,15 +2587,15 @@ struct MySlider_01 : SvgSlider
         minHandlePos = Vec(0, 33).plus(margin);
 
         background->svg =
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_sliderBG_01.svg"));
-        // background->svg = SVG::load(asset::plugin(thePlugin,"res/mschack_sliderBG_01.svg"));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_sliderBG_01.svg"));
+        // background->svg = SVG::load(asset::plugin(pluginInstance,"res/mschack_sliderBG_01.svg"));
         background->wrap();
         background->box.pos = margin;
         box.size = background->box.size.plus(margin.mult(2));
 
         handle->svg =
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_sliderKNOB_01.svg"));
-        // handle->svg = SVG::load(asset::plugin(thePlugin,"res/mschack_sliderKNOB_01.svg"));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_sliderKNOB_01.svg"));
+        // handle->svg = SVG::load(asset::plugin(pluginInstance,"res/mschack_sliderKNOB_01.svg"));
         handle->wrap();
     }
 };
@@ -2610,15 +2610,15 @@ struct Slider02_10x15 : SvgSlider
         minHandlePos = Vec(-3, 60).plus(margin);
 
         background->svg =
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_sliderBG_02.svg"));
-        // background->svg = SVG::load(asset::plugin(thePlugin,"res/mschack_sliderBG_02.svg"));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_sliderBG_02.svg"));
+        // background->svg = SVG::load(asset::plugin(pluginInstance,"res/mschack_sliderBG_02.svg"));
         background->wrap();
         background->box.pos = margin;
         box.size = background->box.size.plus(margin.mult(2));
 
         handle->svg =
-            APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Slider02_10x15.svg"));
-        // handle->svg = SVG::load(asset::plugin(thePlugin,"res/mschack_Slider02_10x15.svg"));
+            APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Slider02_10x15.svg"));
+        // handle->svg = SVG::load(asset::plugin(pluginInstance,"res/mschack_Slider02_10x15.svg"));
         handle->wrap();
     }
 };
@@ -2631,8 +2631,8 @@ struct MyPortInSmall : SvgPort
 {
     MyPortInSmall()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_PortIn_small.svg")));
-        // setSvg( SVG::load(asset::plugin(thePlugin, "res/mschack_PortIn_small.svg" ) ) );
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_PortIn_small.svg")));
+        // setSvg( SVG::load(asset::plugin(pluginInstance, "res/mschack_PortIn_small.svg" ) ) );
         // wrap();
         // box.size = background->box.size;
     }
@@ -2646,8 +2646,8 @@ struct MyPortOutSmall : SvgPort
 {
     MyPortOutSmall()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_PortOut_small.svg")));
-        // setSvg( SVG::load(asset::plugin(thePlugin, "res/mschack_PortOut_small.svg" ) ) );
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_PortOut_small.svg")));
+        // setSvg( SVG::load(asset::plugin(pluginInstance, "res/mschack_PortOut_small.svg" ) ) );
         // background->wrap();
         // box.size = background->box.size;
     }
@@ -2661,8 +2661,8 @@ struct Knob_Red1_20 : RoundKnob
 {
     Knob_Red1_20()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Red1_20.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Red1_20.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Red1_20.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Red1_20.svg" )));
     }
 };
 
@@ -2670,8 +2670,8 @@ struct Knob_Red1_15 : RoundKnob
 {
     Knob_Red1_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Red1_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Red1_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Red1_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Red1_15.svg" )));
     }
 };
 
@@ -2683,8 +2683,8 @@ struct Knob_Purp1_20 : RoundKnob
 {
     Knob_Purp1_20()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Purp1_20.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Purp1_20.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Purp1_20.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Purp1_20.svg" )));
     }
 };
 
@@ -2692,8 +2692,8 @@ struct Knob_Purp1_15 : RoundKnob
 {
     Knob_Purp1_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Purp1_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Purp1_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Purp1_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Purp1_15.svg" )));
     }
 };
 
@@ -2705,8 +2705,8 @@ struct Knob_Green1_15 : RoundKnob
 {
     Knob_Green1_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Green1_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Green1_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Green1_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Green1_15.svg" )));
     }
 };
 
@@ -2714,8 +2714,8 @@ struct Knob_Green1_40 : RoundKnob
 {
     Knob_Green1_40()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Green1_40.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Green1_40.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Green1_40.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Green1_40.svg" )));
     }
 };
 
@@ -2727,8 +2727,8 @@ struct Knob_Blue1_26 : RoundKnob
 {
     Knob_Blue1_26()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue1_26.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue1_26.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue1_26.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue1_26.svg" )));
     }
 };
 
@@ -2740,8 +2740,8 @@ struct Knob_Blue2_26 : RoundKnob
 {
     Knob_Blue2_26()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_26.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_26.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_26.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_26.svg" )));
     }
 };
 
@@ -2750,8 +2750,8 @@ struct Knob_Blue2_26_Snap : RoundKnob
     Knob_Blue2_26_Snap()
     {
         snap = true;
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_26.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_26.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_26.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_26.svg" )));
     }
 };
 
@@ -2759,8 +2759,8 @@ struct Knob_Blue2_15 : RoundKnob
 {
     Knob_Blue2_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_15.svg" )));
     }
 };
 
@@ -2768,8 +2768,8 @@ struct Knob_Blue2_40 : RoundKnob
 {
     Knob_Blue2_40()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_40.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_40.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_40.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_40.svg" )));
     }
 };
 
@@ -2777,8 +2777,8 @@ struct Knob_Blue2_56 : RoundKnob
 {
     Knob_Blue2_56()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_56.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue2_56.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_56.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue2_56.svg" )));
     }
 };
 
@@ -2790,8 +2790,8 @@ struct Knob_Blue3_20 : RoundKnob
 {
     Knob_Blue3_20()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue3_20.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue3_20.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue3_20.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue3_20.svg" )));
     }
 };
 
@@ -2799,8 +2799,8 @@ struct Knob_Blue3_15 : RoundKnob
 {
     Knob_Blue3_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Blue3_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Blue3_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Blue3_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Blue3_15.svg" )));
     }
 };
 
@@ -2812,8 +2812,8 @@ struct Knob_Yellow1_26 : RoundKnob
 {
     Knob_Yellow1_26()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow1_26.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow1_26.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow1_26.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow1_26.svg" )));
     }
 };
 
@@ -2821,8 +2821,8 @@ struct Knob_Yellow1_15 : RoundKnob
 {
     Knob_Yellow1_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow1_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow1_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow1_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow1_15.svg" )));
     }
 };
 
@@ -2834,8 +2834,8 @@ struct Knob_Yellow2_26 : RoundKnob
 {
     Knob_Yellow2_26()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_26.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_26.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_26.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_26.svg" )));
     }
 };
 
@@ -2844,8 +2844,8 @@ struct Knob_Yellow2_26_Snap : RoundKnob
     Knob_Yellow2_26_Snap()
     {
         snap = true;
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_26.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_26.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_26.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_26.svg" )));
     }
 };
 
@@ -2853,8 +2853,8 @@ struct Knob_Yellow2_40 : RoundKnob
 {
     Knob_Yellow2_40()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_40.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_40.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_40.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_40.svg" )));
     }
 };
 
@@ -2862,8 +2862,8 @@ struct Knob_Yellow2_56 : RoundKnob
 {
     Knob_Yellow2_56()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_56.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_56.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_56.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_56.svg" )));
     }
 };
 
@@ -2872,8 +2872,8 @@ struct Knob_Yellow2_56_Snap : RoundKnob
     Knob_Yellow2_56_Snap()
     {
         snap = true;
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_56.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow2_56.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_56.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow2_56.svg" )));
     }
 };
 //-----------------------------------------------------
@@ -2884,8 +2884,8 @@ struct Knob_Yellow3_15 : RoundKnob
 {
     Knob_Yellow3_15()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow3_15.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow3_15.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow3_15.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow3_15.svg" )));
     }
 };
 
@@ -2893,8 +2893,8 @@ struct Knob_Yellow3_20 : RoundKnob
 {
     Knob_Yellow3_20()
     {
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow3_20.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow3_20.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow3_20.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow3_20.svg" )));
     }
 };
 
@@ -2903,7 +2903,7 @@ struct Knob_Yellow3_20_Snap : RoundKnob
     Knob_Yellow3_20_Snap()
     {
         snap = true;
-        setSvg(APP->window->loadSvg(asset::plugin(thePlugin, "res/mschack_Knob_Yellow3_20.svg")));
-        // setSVG(SVG::load(asset::plugin(thePlugin, "res/mschack_Knob_Yellow3_20.svg" )));
+        setSvg(APP->window->loadSvg(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow3_20.svg")));
+        // setSVG(SVG::load(asset::plugin(pluginInstance, "res/mschack_Knob_Yellow3_20.svg" )));
     }
 };

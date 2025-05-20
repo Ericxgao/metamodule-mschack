@@ -163,7 +163,7 @@ struct Morze_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*5, 380 );
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/Morze.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Morze.svg")));
 
         addInput(createInput<MyPortInSmall>(Vec(10, 20), module, Morze::IN_TRIG));
 

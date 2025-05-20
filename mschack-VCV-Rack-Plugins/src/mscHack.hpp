@@ -1,7 +1,7 @@
 #include "rack.hpp"
 
 using namespace rack;
-extern Plugin *thePlugin;
+extern Plugin *pluginInstance;
 
 #include "mscHack_Controls.hpp"
 #include "mscHack_Knob.hpp"

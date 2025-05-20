@@ -419,7 +419,7 @@ struct SEQ_Envelope_8_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*21, 380);
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/SEQ_Envelope_8.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SEQ_Envelope_8.svg")));
 
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 30, 0)));

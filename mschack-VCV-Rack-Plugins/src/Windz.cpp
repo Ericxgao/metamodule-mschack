@@ -191,7 +191,7 @@ struct Windz_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*5, 380 );
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/Windz.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Windz.svg")));
 
         // addInput(Port::create<MyPortInSmall>( Vec( 10, 20 ), Port::INPUT, module, Windz::IN_VOCT
         // ) );

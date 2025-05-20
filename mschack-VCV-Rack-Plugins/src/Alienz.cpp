@@ -209,7 +209,7 @@ struct Alienz_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*5, 380 );
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/Alienz.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Alienz.svg")));
 
         addInput(createInput<MyPortInSmall>(Vec(10, 20), module, Alienz::IN_GATE));
         addInput(createInput<MyPortInSmall>(Vec(10, 241), module, Alienz::IN_RANDTRIG));

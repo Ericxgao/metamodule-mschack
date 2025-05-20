@@ -351,7 +351,7 @@ struct SEQ_6x32x16_Widget : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/SEQ_6x32x16.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SEQ_6x32x16.svg")));
 
         // screw
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));

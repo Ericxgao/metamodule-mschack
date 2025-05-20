@@ -307,7 +307,10 @@ struct Mixer_ : Module
             if (mymodule)
             {
                 param = paramQuantity->paramId - Mixer_::PARAM_CHEQLO;
+                printf("param: %d, value: %f\n", param, paramQuantity->getValue());
                 mymodule->m_lpIn[param] = paramQuantity->getValue();
+            } else {
+                printf("mymodule is null");
             }
 
             RoundKnob::onChange(e);
@@ -439,7 +442,7 @@ struct Mixer_Widget_ : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, Mixer_Svg)));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, Mixer_Svg)));
 
         x = 47;
         y = 13;
@@ -532,13 +535,13 @@ struct Mixer_Widget_ : ModuleWidget
 
             // EQ
             addParam(
-                createParam<Mixer_::MyEQHi_Knob>(Vec(x2, y2), module, Mixer_::PARAM_CHEQHI + ch));
+                createParam<Knob_Green1_15>(Vec(x2, y2), module, Mixer_::PARAM_CHEQHI + ch));
             y2 += 18;
             addParam(
-                createParam<Mixer_::MyEQMid_Knob>(Vec(x2, y2), module, Mixer_::PARAM_CHEQMD + ch));
+                createParam<Knob_Green1_15>(Vec(x2, y2), module, Mixer_::PARAM_CHEQMD + ch));
             y2 += 18;
             addParam(
-                createParam<Mixer_::MyEQLo_Knob>(Vec(x2, y2), module, Mixer_::PARAM_CHEQLO + ch));
+                createParam<Knob_Green1_15>(Vec(x2, y2), module, Mixer_::PARAM_CHEQLO + ch));
             y2 += 20;
 
             // CVs
@@ -869,7 +872,9 @@ void Mixer_::ProcessEQ(int ch, float *pL, float *pR)
         highpass = (highpass + hp1) * MULTI;
         bandpass = (bandpass + bp1[ch][i]) * MULTI;
 
-        out[i] = (highpass * m_hpIn[ch]) + (lowpass * m_lpIn[ch]) + (bandpass * m_mpIn[ch]);
+        out[i] = (highpass * params[PARAM_CHEQHI + ch].getValue()) + 
+        (lowpass * params[PARAM_CHEQLO + ch].getValue()) + 
+        (bandpass * params[PARAM_CHEQMD + ch].getValue());
     }
 
     *pL = out[L];

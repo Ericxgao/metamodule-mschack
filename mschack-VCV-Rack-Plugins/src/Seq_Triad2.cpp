@@ -432,7 +432,7 @@ struct Seq_Triad2_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*25, 380);
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/TriadSequencer2.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/TriadSequencer2.svg")));
 
         //----------------------------------------------------
         // Keyboard Keys

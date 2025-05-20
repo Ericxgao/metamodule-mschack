@@ -368,7 +368,7 @@ struct ARP700_Widget : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/ARP700.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ARP700.svg")));
 
         // screw
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));

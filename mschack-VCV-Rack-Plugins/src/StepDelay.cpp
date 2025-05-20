@@ -194,7 +194,7 @@ struct StepDelay_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*14, 380 );
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/StepDelay.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/StepDelay.svg")));
 
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 30, 0)));

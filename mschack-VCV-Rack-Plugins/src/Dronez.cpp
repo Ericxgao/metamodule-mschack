@@ -239,7 +239,7 @@ struct Dronez_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*5, 380 );
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/Dronez.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Dronez.svg")));
 
         addInput(createInput<MyPortInSmall>(Vec(10, 20), module, Dronez::IN_VOCT));
         addInput(createInput<MyPortInSmall>(Vec(10, 241), module, Dronez::IN_RANDTRIG));

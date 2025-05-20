@@ -127,7 +127,7 @@ struct Compressor_Widget : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/Compressor.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Compressor.svg")));
 
         x = 10;
         y = 34;

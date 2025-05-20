@@ -269,7 +269,7 @@ struct OSC_WaveMorph_3_Widget : ModuleWidget
         setModule(module);
 
         // box.size = Vec( 15*16, 380 );
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/OSC_WaveMorph_3.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/OSC_WaveMorph_3.svg")));
 
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 30, 0)));

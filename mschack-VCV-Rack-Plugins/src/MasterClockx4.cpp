@@ -273,7 +273,7 @@ struct MasterClockx4_Widget : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/MasterClockx4.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/MasterClockx4.svg")));
 
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 30, 0)));

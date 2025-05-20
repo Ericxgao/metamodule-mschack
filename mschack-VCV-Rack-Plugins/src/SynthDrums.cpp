@@ -246,7 +246,7 @@ struct SynthDrums_Widget : ModuleWidget
         int ch, x, y;
 
         setModule(module);
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/SynthDrums.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SynthDrums.svg")));
 
         // screw
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));

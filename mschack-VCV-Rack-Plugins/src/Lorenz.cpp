@@ -170,7 +170,7 @@ struct Lorenz_Widget : ModuleWidget
         // box.size = Vec( 15*16, 380); 240
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/Lorenz.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Lorenz.svg")));
 
         m_pImageWidget = new Widget_LineImage(5, 15, nDISPLAY_WIDTH, nDISPLAY_HEIGHT);
         addChild(m_pImageWidget);

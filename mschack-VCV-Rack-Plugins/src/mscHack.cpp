@@ -1,9 +1,9 @@
 #include "mscHack.hpp"
 
 #if defined(METAMODULE_BUILTIN)
-extern Plugin *thePlugin;
+extern Plugin *pluginInstance;
 #else
-Plugin *thePlugin;
+Plugin *pluginInstance;
 #endif
 
 #if defined(METAMODULE_BUILTIN)
@@ -12,7 +12,7 @@ __attribute__((__visibility__("default"))) void init_mscHack(rack::Plugin *p)
 __attribute__((__visibility__("default"))) void init(rack::Plugin *p)
 #endif
 {
-    thePlugin = p;
+    pluginInstance = p;
 
     /*
     p->addModel( modelSeq_3x16x16 );

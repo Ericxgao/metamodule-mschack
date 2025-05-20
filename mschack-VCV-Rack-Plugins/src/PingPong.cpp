@@ -166,7 +166,7 @@ struct PingPong_Widget : ModuleWidget
 
         setModule(module);
 
-        setPanel(APP->window->loadSvg(asset::plugin(thePlugin, "res/PingPong.svg")));
+        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/PingPong.svg")));
 
         // screw
         addChild(createWidget<ScrewSilver>(Vec(15, 0)));
